@@ -48,11 +48,11 @@ public class Intake extends Subsystem {
     }
     
     public void intake(){
-    	intakeMotor.set(-0.1);
+    	intakeMotor.set(-0.5);
     }
     
     public void lowShoot(){
-    	intakeMotor.set(0.1);
+    	intakeMotor.set(0.9);
     }
     
     public void stopIntake(){
