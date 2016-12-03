@@ -54,11 +54,15 @@ public class Drive extends Subsystem {
     }
     
     public void takeJoystickInputs(Joystick joy){
-    	robotDrive.tankDrive(-joy.getX(), joy.getThrottle());
+    	robotDrive.tankDrive(-joy.getX(), -joy.getThrottle());
+    }
+    
+    public void takeInputs(double leftInput, double rightInput){
+    	robotDrive.tankDrive(leftInput, rightInput);
     }
     
     public void stop(){
-    	robotDrive.drive(0, 0);
+    	robotDrive.tankDrive(0, 0);
     }
 }
 
