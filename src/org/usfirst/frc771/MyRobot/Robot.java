@@ -100,6 +100,8 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("LeftRange", Robot.drive.getLeftRange());
+        SmartDashboard.putNumber("Heading", Robot.drive.getHeading());
     }
 
     /**
